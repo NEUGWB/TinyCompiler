@@ -3,6 +3,7 @@
  * @author ASD
  * –°–Õ±‡“Î∆˜
  * ”Ô∑®£∫
+ * 
  */
 public class Compiler {
 	public static void main(String args[]){

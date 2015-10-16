@@ -1,5 +1,7 @@
 package TinyCompiler;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,6 +29,7 @@ public class LexAnalys {
 
 	public LexAnalys(String fileName) {
 		this.fileName = fileName;
+		System.out.println(fileName);
 		keywordList.addAll(Arrays.asList(keyword));
 	}
 	
@@ -82,8 +85,8 @@ public class LexAnalys {
 	CharGetter cg = new CharGetter();
 
 	public void OpenFile() throws FileNotFoundException {
-		// fr = new FileReader(fileName);
-		fr = System.in;
+		fr = new FileInputStream(fileName);
+		//fr = System.in;
 	}
 
 	/*
@@ -286,7 +289,7 @@ public class LexAnalys {
 	}
 
 	public static void main(String args[]) {
-		LexAnalys la = new LexAnalys("D:\\in.txt");
+		LexAnalys la = new LexAnalys("input.txt");
 		// la.OpenFile();
 		la.init();
 		LexElement le;

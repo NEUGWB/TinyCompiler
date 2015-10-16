@@ -1,0 +1,2 @@
+SET Y 1 + 2 END
+PRINT Y END
